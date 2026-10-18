@@ -676,6 +676,10 @@ img{ display:block; max-width:100%; }
 .accel .offer-head{ max-width: 52em; }
 .offer-head h2, .val-head h2, .ed-heading, .ask-heading, .close-headline{ text-wrap: balance; }
 .val-panel.emphasis .ledger-row{ padding: 26px 0; }
+.val-panel .ledger-row{ grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; }
+.val-panel .ledger-marker{ white-space: nowrap; }
+@media (max-width: 600px){ .val-panel .ledger-marker{ white-space: normal; } .m-sub{ letter-spacing: .1em; font-size: 10px; } .m-hide{ display:none; } .val-panel.emphasis{ padding-left: 24px; padding-right: 24px; } .val-panel .ledger-figure{ font-size: 30px; } }
+.m-sub{ display:block; margin-top: 4px; font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color: var(--gold-thread); opacity:.85; font-style: normal; }
 .accel-intro{ margin-top: 20px; font-size: 21px; line-height: 1.5; opacity: .78; }
 .accel-grid{ display:grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, auto); column-gap: 56px; row-gap: 0; }
 .accel-card{ border-top: 1px solid var(--charcoal); padding-top: 32px; display:grid; grid-row: span 4; grid-template-rows: subgrid; }
@@ -1005,20 +1009,24 @@ img{ display:block; max-width:100%; }
         <div class="val-panel-label">The Business</div>
         <div class="val-panel-sub">What House of Longevity is worth</div>
         <div class="ledger-row">
-          <div class="ledger-marker">Today &middot; fair value</div>
+          <div class="ledger-marker">Today<span class="m-sub">Fair value</span></div>
           <div class="ledger-figure">$29.5m</div>
         </div>
         <div class="ledger-row">
-          <div class="ledger-marker">Year 3 &middot; 2029</div>
+          <div class="ledger-marker">Year 3 &middot; 2029<span class="m-sub">Base &middot; 6,000<span class="m-hide"> patients</span></span></div>
           <div class="ledger-figure">$73.3m</div>
         </div>
         <div class="ledger-row">
-          <div class="ledger-marker">Year 5 &middot; 2031</div>
+          <div class="ledger-marker">Year 5 &middot; 2031<span class="m-sub">Base &middot; 6,000<span class="m-hide"> patients</span></span></div>
           <div class="ledger-figure">$90.0m</div>
         </div>
         <div class="ledger-row">
-          <div class="ledger-marker">Year 5 &middot; if we reach our Target</div>
+          <div class="ledger-marker">Year 5 &middot; 2031<span class="m-sub">Target &middot; 10,000<span class="m-hide"> patients</span></span></div>
           <div class="ledger-figure">$149.3m</div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-marker">Year 5 &middot; 2031<span class="m-sub">Stretch &middot; 25,000<span class="m-hide"> patients</span></span></div>
+          <div class="ledger-figure">$427.2m</div>
         </div>
       </div>
 
@@ -1026,25 +1034,29 @@ img{ display:block; max-width:100%; }
         <div class="val-panel-label">Prepared for Trent Cotchin</div>
         <div class="val-panel-sub">What your 0.5% stake could be worth</div>
         <div class="ledger-row">
-          <div class="ledger-marker">Today &middot; fair value</div>
+          <div class="ledger-marker">Today<span class="m-sub">Fair value</span></div>
           <div class="ledger-figure">$148k</div>
         </div>
         <div class="ledger-row">
-          <div class="ledger-marker">Year 3 &middot; 2029</div>
+          <div class="ledger-marker">Year 3 &middot; 2029<span class="m-sub">Base &middot; 6,000<span class="m-hide"> patients</span></span></div>
           <div class="ledger-figure">$367k</div>
         </div>
         <div class="ledger-row">
-          <div class="ledger-marker">Year 5 &middot; 2031</div>
+          <div class="ledger-marker">Year 5 &middot; 2031<span class="m-sub">Base &middot; 6,000<span class="m-hide"> patients</span></span></div>
           <div class="ledger-figure">$450k</div>
         </div>
         <div class="ledger-row">
-          <div class="ledger-marker">Year 5 &middot; if we reach our Target</div>
+          <div class="ledger-marker">Year 5 &middot; 2031<span class="m-sub">Target &middot; 10,000<span class="m-hide"> patients</span></span></div>
           <div class="ledger-figure">$747k</div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-marker">Year 5 &middot; 2031<span class="m-sub">Stretch &middot; 25,000<span class="m-hide"> patients</span></span></div>
+          <div class="ledger-figure">$2.14m</div>
         </div>
       </div>
     </div>
 
-    <div class="val-footnote reveal reveal-delay-3">Our Base case is 6,000 active patients. Our Target is 10,000.</div>
+    <div class="val-footnote reveal reveal-delay-3">Active patients: Base 6,000, Target 10,000, Stretch 25,000.</div>
   </div>
 </section>
 
